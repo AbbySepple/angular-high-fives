@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 
 <head>
   <meta charset="utf-8">
@@ -12,15 +12,19 @@
 
 </head>
 
-<body ng-app="myApp">
+<body>
   <img src="imgs/banner.png" style="width:704px;height:228px;">
   <div ng-controller="HighFiveController as hfc" ng-init="hfc.highfive" class="container" id="discription">
-    <p>this will talk about the finn wanting a high five. will also house the buttons</p>
+    <p>Jake The Dog lives in the land of Ooo with his brother Finn The Human and his girlfriend Lady Rainicorn
+      (my Korean homegirl). Jake and his brother Finn had a pretty decent highfive, but now they're looking
+    to achieve an epic highfive. Each Ooo citizen has their own high five power level, and anything below it
+    will note count as a high five, and will make their rank go down. </p>
 
+    <br />
     <img src="imgs/jake.jpeg" />
     <button type="button" ng-click='hfc.highfive()'>High Five Jake</button>
 
-<!--
+    <!--
     <div ng-controller="HighFiveController as hfc" ng-init="" class="container" id="discription">
       <img src="imgs/finn.png" />
       <button type="button" ng-click='hfc.highsix()'>High Five Finn</button>
@@ -32,17 +36,14 @@
 
 
 
-
-
-
     <div ng-repeat='thing in hfc.highfive' class='col-sm-3'>
       <p>this will be the results of the button clicking and stuuuuuf</p>
 
       <p>
-        {{ hfc.highFive }}
+        {{ vm.skill }}
       </p>
     </div>
-      </div>
+  </div>
 </body>
 
 </html>
