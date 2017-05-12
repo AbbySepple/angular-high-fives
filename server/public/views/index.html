@@ -14,26 +14,35 @@
 
 <body ng-app="myApp">
   <img src="imgs/banner.png" style="width:704px;height:228px;">
-  <div ng-controller="HighFiveController as hfc" class="container" id="discription">
+  <div ng-controller="HighFiveController as hfc" ng-init="hfc.highfive" class="container" id="discription">
     <p>this will talk about the finn wanting a high five. will also house the buttons</p>
+
     <img src="imgs/jake.jpeg" />
-    <button type="button" ng-click='hfc.highfive()'>Jake's H5 Level</button>
-    <img src="imgs/finn.png" />
-    <button type="button" ng-click='hfc.highfive()'>Finn's (your) H5 Level</button>
+    <button type="button" ng-click='hfc.highfive()'>High Five Jake</button>
+
+<!--
+    <div ng-controller="HighFiveController as hfc" ng-init="" class="container" id="discription">
+      <img src="imgs/finn.png" />
+      <button type="button" ng-click='hfc.highsix()'>High Five Finn</button>
+
+      <img src="imgs/lady.png" />
+      <button type="button" ng-click='hfc.highfour()'>High Five Lady</button>
+
+-->
 
 
-  </div>
 
 
 
 
-  <div ng-repeat='thing in hfc.highfive' class='col-sm-3'>
-    <p>this will be the results of the button clicking and stuuuuuf</p>
+    <div ng-repeat='thing in hfc.highfive' class='col-sm-3'>
+      <p>this will be the results of the button clicking and stuuuuuf</p>
 
-    <p>
-      {{ thing.ranNum }}
-    </p>
-  </div>
+      <p>
+        {{ hfc.highFive }}
+      </p>
+    </div>
+      </div>
 </body>
 
 </html>
