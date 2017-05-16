@@ -4,46 +4,33 @@
 <head>
   <meta charset="utf-8">
   <title>Angular Routing Magic!</title>
-  <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+  <link rel="stylesheet" href="/vendor/bootstrap.min.css" />
   <script src="/vendor/angular.min.js" type="text/javascript"></script>
   <script src="/vendor/angular-route.min.js" type="text/javascript"></script>
   <script src="/scripts/client.js" type="text/javascript"></script>
-  <script src="scripts/service.js" type="text/javascript"></script>
-
+  <script src="/scripts/controllers/jakeController.js" charset="utf-8"></script>
+  <script src="/scripts/services/jakeService.js" charset="utf-8"></script>
+  <script src="/scripts/controllers/finnController.js" charset="utf-8"></script>
+  <script src="/scripts/services/finnService.js" charset="utf-8"></script>
+  <script src="/scripts/service.js" charset="utf-8"></script>
+  <base href="/">
 </head>
 
-<body>
+<body ng-app="myApp">
   <img src="imgs/banner.png" style="width:704px;height:228px;">
-  <div ng-controller="HighFiveController as hfc" ng-init="hfc.highfive" class="container" id="discription">
-    <p>Jake The Dog lives in the land of Ooo with his brother Finn The Human and his girlfriend Lady Rainicorn
-      (my Korean homegirl). Jake and his brother Finn had a pretty decent highfive, but now they're looking
-    to achieve an epic highfive. Each Ooo citizen has their own high five power level, and anything below it
-    will note count as a high five, and will make their rank go down. </p>
-
-    <br />
-    <img src="imgs/jake.jpeg" />
-    <button type="button" ng-click='hfc.highfive()'>High Five Jake</button>
-
-    <!--
-    <div ng-controller="HighFiveController as hfc" ng-init="" class="container" id="discription">
-      <img src="imgs/finn.png" />
-      <button type="button" ng-click='hfc.highsix()'>High Five Finn</button>
-
-      <img src="imgs/lady.png" />
-      <button type="button" ng-click='hfc.highfour()'>High Five Lady</button>
-
--->
-
-
-
-    <div ng-repeat='thing in hfc.highfive' class='col-sm-3'>
-      <p>this will be the results of the button clicking and stuuuuuf</p>
-
-      <p>
-        {{ vm.skill }}
-      </p>
-    </div>
-  </div>
+  <p>Jake The Dog lives in the land of Ooo with his brother Finn The Human and
+    his girlfriend Lady Rainicorn (my Korean homegirl). Jake and his brother Finn
+    had a pretty decent highfive, but now they're looking to achieve an epic highfive.
+    Each Ooo citizen has their own high five power level, and anything below it will
+    note count as a high five, and will make their rank go down.
+  </p>
+  <h3>Chose a citizen of Ooo</h3>
+  <a ng-href="/jake">Jake The Dog | </a>
+  <a ng-href="/finn">Finn The Human | </a>
+  <a ng-href="/lady">Lady Rainicorn | </a>
+  <div ng-view></div>
+<p>Your overall high fives is --
+</p>
 </body>
 
 </html>
