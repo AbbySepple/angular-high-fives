@@ -21,17 +21,20 @@ myApp.service('OooNumber', ['GetNumber', function(GetNumber){
 myApp.service('CompareHighFive', ['GetNumber', function(GetNumber){
   // var vm = this;
 // vm.highfiveUser = function(min, max) {
+this.count = 0;
   this.ranNumUser = GetNumber.randomNumber;
-
-  console.log('inside compare highfive', this.ranNumUser);
+  // console.log('inside compare highfive', this.ranNumUser);
   // vm.maybeHighFive = function() {
     console.log('inside maybeHighFive');
+  this.yourSkill = function(){
+    console.log('inside this.yourSkill');
     if (this.ranNumUser >= this.ranNum) {
       this.count++;
-      console.log('High Five Man! ');
+      console.log('High Five Man! ', yourSkill);
     } else {
       console.log('Too Bad Bro, Try Again. ');
     }
+  };
 // };
 
 }]);//end compare highfive
